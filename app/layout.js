@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 
 export const metadata = {
-  title: 'Metaversus',
+  title: 'Metaversus - itxSaaad',
   description: 'A collection of 10,000 unique NFTs on the Ethereum blockchain.',
 };
 
