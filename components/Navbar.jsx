@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import styles from '@/styles';
 import { navVariants } from '@/utils/motion';
 
-import React from 'react';
-
 function Navbar() {
   return (
     <motion.nav
