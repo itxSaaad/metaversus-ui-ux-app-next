@@ -1,5 +1,5 @@
 'use client';
 
-const Explore = () => <section>Explore section</section>;
+const Explore = () => <section id="explore">Explore section</section>;
 
 export default Explore;
