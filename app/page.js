@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-primary-black overflow-hidden">
       <Navbar />
       <Hero />
       <About />
@@ -23,6 +23,6 @@ export default function Home() {
       <Insights />
       <Feedback />
       <Footer />
-    </>
+    </div>
   );
 }
