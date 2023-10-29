@@ -9,7 +9,8 @@ import styles from '@/styles';
 import { staggerContainer } from '@/utils/motion';
 
 function Explore() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState('world-2');
+
   return (
     <section id="explore" className={`${styles.paddings}`}>
       <motion.div
@@ -17,7 +18,7 @@ function Explore() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} flex flex-col mx-auto`}
+        className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
         <TypingText title="| The World" textStyles="text-center" />
         <TitleText
@@ -32,11 +33,11 @@ function Explore() {
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (
             <ExploreCard
-              index={index}
               key={world.id}
+              {...world}
+              index={index}
               active={active}
               handleClick={setActive}
-              {...world}
             />
           ))}
         </div>
