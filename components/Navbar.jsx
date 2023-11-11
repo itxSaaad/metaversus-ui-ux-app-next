@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from '@/styles';
 import { navVariants } from '@/utils/motion';
@@ -17,17 +18,21 @@ function Navbar() {
       <div
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
-        <img
+        <Image
           src="/search.svg"
           alt="Search"
+          height={24}
+          width={24}
           className="w-[24px] h-[24px] object-contain"
         />
         <h2 className="text-[24px] leading-[30px] font-extrabold text-white">
           METAVERSUS
         </h2>
-        <img
+        <Image
           src="/menu.svg"
           alt="menu"
+          height={24}
+          width={24}
           className="w-[24px] h-[24px] object-contain"
         />
       </div>

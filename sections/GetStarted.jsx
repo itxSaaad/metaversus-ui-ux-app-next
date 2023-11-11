@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import { StartSteps, TitleText, TypingText } from '@/components';
 import { startingFeatures } from '@/constants';
@@ -21,9 +22,11 @@ function GetStarted() {
           variants={planetVariants('left')}
           className={`flex-1 ${styles.flexCenter}`}
         >
-          <img
+          <Image
             src="/get-started.png"
             alt="Get Started"
+            height={500}
+            width={500}
             className="w-[90%] h-[90%] object-contain"
           />
         </motion.div>

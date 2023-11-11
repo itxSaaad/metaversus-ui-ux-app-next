@@ -4,6 +4,7 @@ import { motion, spring } from 'framer-motion';
 
 import styles from '@/styles';
 import { fadeIn } from '@/utils/motion';
+import Image from 'next/image';
 
 function ExploreCard({ index, active, handleClick, id, title, imgUrl }) {
   return (
@@ -14,7 +15,9 @@ function ExploreCard({ index, active, handleClick, id, title, imgUrl }) {
       } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
       onClick={() => handleClick(id)}
     >
-      <img
+      <Image
+        height={700}
+        width={700}
         src={imgUrl}
         alt="planet-04"
         className="absolute w-full h-full object-cover rounded-[24px]"
@@ -24,7 +27,9 @@ function ExploreCard({ index, active, handleClick, id, title, imgUrl }) {
           <div
             className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
           >
-            <img
+            <Image
+              height={60}
+              width={60}
               src="/headset.svg"
               alt="headset"
               className="w-1/2 h-1/2 object-contain"
