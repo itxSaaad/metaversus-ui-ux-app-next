@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import { NewFeatures, TitleText, TypingText } from '@/components';
 import { newFeatures } from '@/constants';
 import styles from '@/styles';
 import { fadeIn, planetVariants, staggerContainer } from '@/utils/motion';
-import Image from 'next/image';
 
 const WhatsNew = () => {
   return (
