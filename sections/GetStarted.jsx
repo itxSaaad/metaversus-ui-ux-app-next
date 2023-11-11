@@ -40,7 +40,11 @@ function GetStarted() {
 
           <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
             {startingFeatures.map((feature, index) => (
-              <StartSteps key={feature} number={index + 1} title={feature} />
+              <StartSteps
+                key={feature}
+                number={`${index < 10 ? '0' : ''} ${index + 1}`}
+                title={feature}
+              />
             ))}
           </div>
         </motion.div>

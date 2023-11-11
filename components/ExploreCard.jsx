@@ -1,10 +1,10 @@
 'use client';
 
-import { motion, spring } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from '@/styles';
 import { fadeIn } from '@/utils/motion';
-import Image from 'next/image';
 
 function ExploreCard({ index, active, handleClick, id, title, imgUrl }) {
   return (
