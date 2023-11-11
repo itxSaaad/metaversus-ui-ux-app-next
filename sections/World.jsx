@@ -1,11 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import { TitleText, TypingText } from '@/components';
 import styles from '@/styles';
 import { fadeIn, staggerContainer } from '@/utils/motion';
-import Image from 'next/image';
 
 const World = () => (
   <section className={`${styles.paddings} relative z-10`}>

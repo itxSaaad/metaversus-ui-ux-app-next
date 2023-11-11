@@ -1,5 +1,25 @@
 'use client';
 
-const Feedback = () => <section>Feedback section</section>;
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+import { InsightCard, TitleText, TypingText } from '@/components';
+import styles from '@/styles';
+import { insights } from '@/constants';
+import { fadeIn, staggerContainer } from '@/utils/motion';
+
+const Feedback = () => (
+  <section className={`${styles.paddings} relative z-10`}>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}
+    >
+      Feedback section
+    </motion.div>
+  </section>
+);
 
 export default Feedback;
