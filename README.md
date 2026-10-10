@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Architecture
+
+```mermaid
+flowchart LR
+  Visitor -->|explore featured virtual worlds and panels| Next[Next.js application\nVercel deployment]
+  Next --> Pages[App and Pages Router]
+  Pages --> Sections[Metaverse landing page sections]
+  Sections --> Components[Reusable React components]
+  Components --> Constants[Local content and configuration]
+  Components --> Visitor
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +46,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Vercel Deployment
+Next.js application built from the repository root, including its server-side routes.
+See the repository-root [vercel.json](./vercel.json) for build roots and routing. Configure private values in Vercel Project Settings; never commit secrets.
